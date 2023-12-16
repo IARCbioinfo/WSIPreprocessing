@@ -49,7 +49,7 @@ __email__ = "mathiane@iarc.who.int"
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Test set carcinoids for scanners.')
-    parser.add_argument('--TargetTiles', type=str, help='HE stained Tiles used as reference, if the goal is to remove Safron staining')
+    parser.add_argument('--TargetTile', type=str, help='HE stained Tiles used as reference, if the goal is to remove Safron staining')
     parser.add_argument('--inputdir', type=str, help="Directory where the tiles to normalized are saved")
     parser.add_argument('--PatientID', type=str,    help='Folder name matching with the patients ID, containing the tiles to normalized.')
     parser.add_argument('--outputdir', type=str, help='Directory where the tiles normalized through the Vahadane color deconvolution method will be saved')
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     # directory_target   = '/home/mathiane/LNENWork/Tiles_HE_TCGA_LUAD_384_384'
     # TARGET_PATH_HE = directory_target  + '/F-TCGA-64-5781-01Z-00-DX1/accept/'+'TCGA-64-5781-01Z-00-DX1_25345_9985.jpg'
     # Get target tile
-    target_imageHE = utils.read_image(args.TargetTiles)
+    target_imageHE = utils.read_image(args.TargetTile)
 
     # Create Vahadane instance
     vhdHE = vahadane(STAIN_NUM=2, LAMBDA1=0.01, LAMBDA2=0.01, fast_mode=0, getH_mode=0, ITER=50)
