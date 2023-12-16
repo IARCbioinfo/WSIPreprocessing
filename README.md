@@ -21,15 +21,15 @@ The whole slide image (WSI) pre-processing repository includes the patching proc
 - **Note:**
 	- The normalised tiles will be of the same sized as the non-normalised tiles
 - **Structure input directory**:
-- Non-normalized directory
+```- Non-normalized tiles directory
     - Patient ID1
             - accept (non background tiles)
                     - patient_id_1x_y.jpg
-            - reject (baackground tiles)
+            - reject (baackground tiles)```
 
 - **Structure output directory**::
-- Normalized directory
+```- Normalized tiles directory
     - Patient ID2
             - accept (non background tiles)
                     - patient_id_1x_y.jpg
-            - reject (baackground tiles if ApplyVahadaneOnBackgroundTiles specified) 
+            - reject (baackground tiles if ApplyVahadaneOnBackgroundTiles specified)```
