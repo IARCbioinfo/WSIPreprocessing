@@ -1,5 +1,5 @@
 # WSIPreprocessing
-The whole slide image (WSI) pre-processing repository includes the patching process and the Vahadane colour normalisation method. These pre-processing are highly recomanded before applying a deep-learning method.
+The whole slide image (WSI) pre-processing repository includes the patching process and the Vahadane colour normalisation method. These pre-processing steps are strongly recommended before applying a deep learning method.
 
 ## Tiling 
 - **Description:** Divide WSI to image patches called tiles.
