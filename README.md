@@ -12,3 +12,24 @@ The whole slide image (WSI) pre-processing repository includes the patching proc
 	- PatientID argument is expected to be the basename of the WSI file *eg: if the WSI filename is patient_id1.svs then PatientID must be patient_id1*
 - Configuration and examples:
 	- The command lines used to pre-process the Ki-67, PHH3 and HE/HES WSIs from the ESMO Open slides are available in the `Tiling/config` 
+
+## Vahadane color normalization method
+- **Description:** Python implementation of the color deconvolution methods from Vahadane et al (IEEE Trans Med Imaging, 2016 - https://github.com/abhishekvahadane/CodeRelease_ColorNormalization). This method can be used to artificially removed saffron stain on HES tiles extracted from WSI, and more generally to normalised color between tiles of WSIs coming from different hospitals.
+- **See:** `VahadaneColorNorm` folder
+- 🎯 **Usage:** `python VahadaneColorNorm/ApplyVahadaneNormalization.py --TargetTile /path/to/reference/tile.jpg  --inputdir /path/to/tiles/directory --PatientID FolderNameOfTilesToNormalized --outputdir /path/where/tiles/Normalised/will_be_saved`
+- **Help:** `python VahadaneColorNorm/ApplyVahadaneNormalization.py --help`
+- **Note:**
+	- The normalised tiles will be of the same sized as the non-normalised tiles
+- **Structure input directory**:
+- Non-normalized directory
+    - Patient ID1
+            - accept (non background tiles)
+                    - patient_id_1x_y.jpg
+            - reject (baackground tiles)
+
+- **Structure output directory**::
+- Normalized directory
+    - Patient ID2
+            - accept (non background tiles)
+                    - patient_id_1x_y.jpg
+            - reject (baackground tiles if ApplyVahadaneOnBackgroundTiles specified) 
