@@ -32,7 +32,7 @@ The whole slide image (WSI) pre-processing repository includes the patching proc
 - **Structure output directory**::
 ```
 - Normalized tiles directory
-    - Patient ID2
+    - Patient ID1
             - accept (non background tiles)
                     - patient_id_1x_y.jpg
             - reject (baackground tiles if ApplyVahadaneOnBackgroundTiles specified)
