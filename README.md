@@ -25,7 +25,7 @@ The whole slide image (WSI) pre-processing repository includes the patching proc
 - Non-normalized tiles directory
     - Patient ID1
             - accept (non background tiles)
-                    - patient_id_1x_y.jpg
+                    - patient_id1_x_y.jpg
             - reject (baackground tiles)
 ```
 
@@ -34,6 +34,6 @@ The whole slide image (WSI) pre-processing repository includes the patching proc
 - Normalized tiles directory
     - Patient ID1
             - accept (non background tiles)
-                    - patient_id_1x_y.jpg
+                    - patient_id1_x_y.jpg
             - reject (baackground tiles if ApplyVahadaneOnBackgroundTiles specified)
 ```
